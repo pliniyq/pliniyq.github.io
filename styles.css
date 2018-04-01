@@ -1,0 +1,66 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.slide1 {
+    background-image: url('images/1.jpg');
+}
+
+.slide2::before {
+    /* background-color: red; */
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/2.jpg');
+    /* background-attachment: fixed; */
+    z-index: -1;
+    transform: translateZ(-1px) scale(2);
+}
+
+.slide3 {
+    /* background-color: yellow; */
+    background-image: url('images/3.jpg');
+}
+
+.slide4::before {
+    /* background-color: black; */
+    /* background-image: url('images/4.jpg');
+    background-attachment: fixed; */
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/4.jpg');
+    /* background-attachment: fixed; */
+    z-index: -1;
+    transform: translateZ(-1px) scale(2);
+}
+
+
+.slide5 {
+    /* background-color: yellow; */
+    background-image: url('images/5.jpg');
+}
